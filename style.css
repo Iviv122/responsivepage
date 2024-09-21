@@ -1,17 +1,16 @@
-*{
-    box-sizing: content-box;
-}
 body{
 
     background: black;
     color: white;
     font-family: monospace;
     margin: 0;
-    
+
+	display:grid;    
 }
 header{
     text-align: center;
     padding: 15px;
+    grid-area: 2 / 1 / span 2 / span 3;
     font-size: 48px;
 }
 nav{
@@ -19,9 +18,11 @@ nav{
     justify-content: space-around;
     font-size: 24px;
     outline: 3px solid rgb(47, 255, 186);
+    grid-area: 5 / 1 / span 2 / span 3;
 }
 .container{
-    display: flex;
+    display: flex; 
+    grid-area: 7 / 1 / span 2 / span 3;
 }
 .column{
     outline: 4px solid rgb(47,255,186);
@@ -34,6 +35,7 @@ footer{
     padding: 50px;
     font-size: 24px;
     outline: 3px solid rgb(47,255,186);
+    grid-area: 9 / 1 / span 2 / span 3;
 }
 .image{
     background-color: gray;
