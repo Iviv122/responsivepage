@@ -14,24 +14,34 @@ header{
     font-size: 48px;
 }
 nav{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid: auto/ auto auto auto auto;
+    grid-row: 1;
+    grid-column: 4;
     font-size: 24px;
     outline: 3px solid rgb(47, 255, 186);
     grid-area: 5 / 1 / span 2 / span 3;
 }
+.link{
+    text-align: center;
+}
 .container{
-    display: flex; 
+    display: grid;
     grid-area: 7 / 1 / span 2 / span 3;
 }
-.column{
+.column1{
     outline: 4px solid rgb(47,255,186);
     padding: 10px;
-    flex-direction: column;
+    grid-area:1/1;
 }
+.column2{
+    outline: 4px solid rgb(47,255,186);
+    padding: 10px;
+    grid-area:1/2;
+}
+
 footer{
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
     padding: 50px;
     font-size: 24px;
     outline: 3px solid rgb(47,255,186);
@@ -47,9 +57,21 @@ footer{
     min-height: 50px;
 }
 @media screen and (max-width: 980px) {
-    .container, nav {   
-        flex:100%;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-  }
+.column1{
+    outline: 4px solid rgb(47,255,186);
+    padding: 10px;
+    grid-area:1/1;
+}
+.column2{
+    outline: 4px solid rgb(47,255,186);
+    padding: 10px;
+    grid-area:2/1;
+}
+.nav{
+    grid: auto auto auto auto /auto;
+}
+.link{
+    grid-area:span 1/1;
+}
+
+}
